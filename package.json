@@ -9,7 +9,8 @@
     "docker:stop": "docker stop $(docker ps -q)",
     "docker:test": "docker run -it thinkful-ed/zid-pf-testing-basics-03-more-with-chai npm test",
     "start:solution": "npm run -it docker:build && npm run docker:run",
-    "test": "mocha test",
+    "test": "nyc --reporter=text mocha tests",
+    "coverage": "nyc npm run test",
     "test:solution": "npm run docker:build && npm run docker:test"
   },
   "keywords": [],
@@ -17,6 +18,8 @@
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^8.0.1"
-  }
+    "mocha": "^8.0.1",
+    "nyc": "^15.1.0"
+  },
+  "dependencies": {}
 }
