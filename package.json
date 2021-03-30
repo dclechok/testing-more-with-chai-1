@@ -10,7 +10,6 @@
     "docker:test": "docker run -it thinkful-ed/zid-pf-testing-basics-03-more-with-chai npm test",
     "start:solution": "npm run -it docker:build && npm run docker:run",
     "test": "nyc --reporter=text mocha tests",
-    "coverage": "nyc npm run test",
     "test:solution": "npm run docker:build && npm run docker:test"
   },
   "keywords": [],
